@@ -1,5 +1,4 @@
-DATA/
-Inferences/
+*.nii.gz
 nnUNet_preprocessed/
 nnUNet_raw/
 nnUNet_trained_models/
