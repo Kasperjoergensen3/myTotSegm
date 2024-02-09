@@ -188,25 +188,9 @@ def download_pretrained_weights(task_id):
         weights_path = config_dir / "Task435_Heart_vessels_118subj"
         WEIGHTS_URL = "manually_download"
     # My code ---------------------------------------------------------------
-    elif task_id == 998:
+    elif task_id == 993:
         config_dir = config_dir / "3d_fullres"
-        weights_path = config_dir / "Task998_liver_50subj"
-        WEIGHTS_URL = "manually_download"
-    elif task_id == 997:
-        config_dir = config_dir / "3d_fullres"
-        weights_path = config_dir / "Task997_liver_300subj"
-        WEIGHTS_URL = "manually_download"
-    elif task_id == 996:
-        config_dir = config_dir / "3d_fullres"
-        weights_path = config_dir / "Task996_BAT_45subj"
-        WEIGHTS_URL = "manually_download"
-    elif task_id == 995:
-        config_dir = config_dir / "3d_fullres"
-        weights_path = config_dir / "Task995_BAT_111subj"
-        WEIGHTS_URL = "manually_download"
-    elif task_id == 994:
-        config_dir = config_dir / "3d_fullres"
-        weights_path = config_dir / "Task994_BAT_135subj"
+        weights_path = config_dir / "Task993_BAT_159subj"
         WEIGHTS_URL = "manually_download"
     # End of my code --------------------------------------------------------
 

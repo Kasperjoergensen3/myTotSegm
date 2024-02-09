@@ -170,15 +170,8 @@ def totalsegmentator(input, output, ml=False, nr_thr_resamp=1, nr_thr_saving=6,
         model = "3d_fullres"
         folds = [0]
     #my code ---------------------------------------------------------------    
-    elif task == "myLiverTest":
-        task_id = 997
-        resample = 1.5
-        trainer = "nnUNetTrainerV2_ep4000_nomirror"
-        crop = None
-        model = "3d_fullres"
-        folds = [0]
-    elif task == "BAT_test":
-        task_id = 994
+    elif task == "my_BAT":
+        task_id = 993
         resample = 1.5
         trainer = "nnUNetTrainerV2_ep4000_nomirror"
         crop = None
@@ -216,7 +209,8 @@ def totalsegmentator(input, output, ml=False, nr_thr_resamp=1, nr_thr_saving=6,
         crop = body_seg
         if verbose: print(f"Rough body segmentation generated in {time.time()-st:.2f}s")
 
-    folds = [0]  # None
+    folds = [5]  # None
+    print(folds)
     seg_img = nnUNet_predict_image(input, output, task_id, model=model, folds=folds,
                          trainer=trainer, tta=False, multilabel_image=ml, resample=resample,
                          crop=crop, crop_path=crop_path, task_name=task, nora_tag=nora_tag, preview=preview, 
