@@ -1,2 +1,5 @@
 DATA/
 Inferences/
+nnUNet_preprocessed/
+nnUNet_raw/
+nnUNet_trained_models/

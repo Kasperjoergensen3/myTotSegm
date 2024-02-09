@@ -22,10 +22,12 @@ def setup_nnunet():
 
     # This variables will only be active during the python script execution. Therefore
     # we do not have to unset them in the end.
-    os.environ["nnUNet_raw_data_base"] = str(weights_dir)  # not needed, just needs to be an existing directory
-    os.environ["nnUNet_preprocessed"] = str(weights_dir)  # not needed, just needs to be an existing directory
-    os.environ["RESULTS_FOLDER"] = str(weights_dir)
-
+    #os.environ["nnUNet_raw_data_base"] = str(weights_dir)  # not needed, just needs to be an existing directory
+    #os.environ["nnUNet_preprocessed"] = str(weights_dir)  # not needed, just needs to be an existing directory
+    #os.environ["RESULTS_FOLDER"] = str(weights_dir)
+    os.environ["nnUNet_raw_data_base"] = 'nnUNet_raw'
+    os.environ["nnUNet_preprocessed"] = 'nnUNet_preprocessed'
+    os.environ["RESULTS_FOLDER"] = 'nnUNet_trained_models'
 
 def setup_totalseg(totalseg_id=None):
     home_path = Path("/tmp") if str(Path.home()) == "/" else Path.home()
